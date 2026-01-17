@@ -1,1 +1,18 @@
+!pip install pulp --q #Optimization Library pulp
 
+!pip  install numpy --q #numpy lib for mathematical computation
+
+!pip install matplotlib --q #matploitlib for graph plotting
+
+import pulp 
+import numpy as np # for numerical calculations
+
+import matplotlib.pyplot as plt # for plotting graphs
+
+
+# Create a maximization problem
+model = pulp.LpProblem("Unique_Solution_LPP", pulp.LpMaximize)
+
+# Decision variables (x1 ≥ 0, x2 ≥ 0)
+x1 = pulp.LpVariable('x1', lowBound=0)
+x2 = pulp.LpVariable('x2', lowBound=0)
